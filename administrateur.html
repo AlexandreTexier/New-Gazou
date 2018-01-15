@@ -1,0 +1,203 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>New Gazou — Admin</title>
+
+
+  <!-- Par Alexandre Texier en 2018, licence Creative Common : BY-NC-SA -->
+
+
+  <script language="javascript" type="text/javascript" src="librairies/jquery-3.1.1.js"></script>
+  <script language="javascript" type="text/javascript" src="librairies/jquery-ui.js"></script>
+  <script language="javascript" type="text/javascript" src="scripts/script_admin.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles/styles_admin.css" />
+</head>
+
+<body>
+
+  <div id='container_admin'>
+
+    <!-- INFOS -->
+    <div id='bloc_infos'>
+      <span id='version'> New Gazou — v1.0-2017 </span>
+      <span id='creative_common'></span>
+    </div>
+
+    <!-- TOP -->
+    <div id='bloc_top'>
+      <button id='btn_match_time_stop' class='btn'>◼</button>
+      <div id='match_time' class='bloc_ecran'>
+        <span id='match_time_minutes'>45</span><span>:</span><span id='match_time_seconds'>00</span>
+      </div>
+      <button id='btn_match_time_play' class='btn'>▶</button>
+    </div>
+
+    <div id='bloc_older'>
+
+      <!-- LEFT -->
+      <div id='bloc_left' class='bloc'>
+        <div id='bloc_points_left' class='bloc_ecran'>
+          <input id='team_name_g' class='team_name' type='text' placeholder='équipe 1'></input>
+          <div id='points_g' class='points'>00</div>
+        </div>
+        <div id='point_btn_holder_g'>
+          <button id='points_down_g' class='btn_score'>-</button>
+          <button id='points_up_g' class='btn_score'>+</button>
+        </div>
+        <ul id='penalites_holder_g'>
+          <li id='penalites_g_1' class='penalites'></li>
+          <li id='penalites_g_2' class='penalites'></li>
+          <li id='penalites_g_3' class='penalites'></li>
+        </ul>
+        <div id='color_holder_g'>
+          <div class='color' style='background-color:rgb(70,140,215);'></div>
+          <div class='color' style='background-color:rgb(40,60,210);'></div>
+          <div class='color' style='background-color:rgb(140,50,210);'></div>
+          <div class='color' style='background-color:rgb(205,55,170);'></div>
+          <div class='color' style='background-color:rgb(190,30,70);'></div>
+          <div class='color' style='background-color:rgb(205,30,30);'></div>
+          <div class='color' style='background-color:rgb(220,140,50);'></div>
+          <div class='color' style='background-color:rgb(220,190,30);'></div>
+          <div class='color' style='background-color:rgb(60,170,45);'></div>
+        </div>
+      </div>
+
+      <!-- MIDDLE -->
+      <div id='bloc_middle' class='bloc'>
+        <textarea row='5' id='theme' class='bloc_ecran'></textarea>
+        <div id='impro_time_holder'>
+          <button id='btn_impro_time_stop' class='btn'>◼</button>
+          <div id='impro_time' class='bloc_ecran'>
+            <span id='impro_time_minutes'>03</span><span>:</span><span id='impro_time_seconds'>15</span>
+          </div>
+          <button id='btn_impro_time_play' class='btn'>▶</button>
+        </div>
+
+        <div id='btn_impro_time_holder'>
+          <button id='btn_impro_minutes_down' class='btn_score'>-</button>
+          <button id='btn_impro_minutes_up' class='btn_score'>+</button>
+          <div style='width:8px; height:15px; float:left;'></div>
+          <button id='btn_impro_seconds_down' class='btn_score'>-</button>
+          <button id='btn_impro_seconds_up' class='btn_score'>+</button>
+        </div>
+
+        <ul id='theme_holder'>
+
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='0' class='bloc_theme' placeholder="theme 1"></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='1' class='bloc_theme' placeholder="theme 2"></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='2' class='bloc_theme' placeholder="theme 3"></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='3' class='bloc_theme' placeholder="theme 4"></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='4' class='bloc_theme' placeholder="theme 5"></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='5' class='bloc_theme' placeholder="theme 6"></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='6' class='bloc_theme' placeholder="theme 7" style='margin-bottom:6px;'></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='7' class='bloc_theme' placeholder="theme 8"></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='8' class='bloc_theme' placeholder="theme 9"></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='9' class='bloc_theme' placeholder="theme 10"></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='10' class='bloc_theme' placeholder="theme 11"></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='11' class='bloc_theme' placeholder="theme 12"></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='12' class='bloc_theme' placeholder="theme 13"></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+          <il class='theme_line'>
+            <textarea row='1' dataNumber='13' class='bloc_theme' placeholder="theme 14"></textarea>
+            <button class='btn_theme theme_load'></button>
+            <button class='btn_theme theme_send'></button>
+          </il>
+
+        </ul>
+
+        <div id='buttons_holder'>
+          <button id='btn_caucus' class='btn_actions'>caucus</button>
+          <button id='btn_vote' class='btn_actions'>vote</button>
+          <button id='btn_mini' class='btn_actions'>mode réduit</button>
+          <button id='btn_entracte' class='btn_actions'>entracte</button>
+          <button id='btn_merci' class='btn_actions'>remerciements</button>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div id='bloc_right' class='bloc'>
+        <div id='bloc_points_right' class='bloc_ecran'>
+          <input id='team_name_d' class='team_name' type='text' placeholder='équipe 2'></input>
+          <div id='points_d' class='points'>00</div>
+        </div>
+        <div id='point_btn_holder_d'>
+          <button id='points_down_d' class='btn_score'>-</button>
+          <button id='points_up_d' class='btn_score'>+</button>
+        </div>
+        <ul id='penalites_holder_d'>
+          <li id='penalites_d_1' class='penalites'></li>
+          <li id='penalites_d_2' class='penalites'></li>
+          <li id='penalites_d_3' class='penalites'></li>
+        </ul>
+        <div id='color_holder_d'>
+          <div class='color' style='background-color:rgb(70,140,215);'></div>
+          <div class='color' style='background-color:rgb(40,60,210);'></div>
+          <div class='color' style='background-color:rgb(140,50,210);'></div>
+          <div class='color' style='background-color:rgb(205,55,170);'></div>
+          <div class='color' style='background-color:rgb(190,30,70);'></div>
+          <div class='color' style='background-color:rgb(205,30,30);'></div>
+          <div class='color' style='background-color:rgb(220,140,50);'></div>
+          <div class='color' style='background-color:rgb(220,190,30);'></div>
+          <div class='color' style='background-color:rgb(60,170,45);'></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
