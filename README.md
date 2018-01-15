@@ -14,7 +14,10 @@ New Gazou permet :
 -de compter des fautes
 -de nommer des équipes…
 -… et de leur attribuer une couleur au choix
--d’afficher un logo -de gérer le timer de match
--de gérer le timer des impros -d’écrire du texte
--de pré-charger des thèmes -de passer en mode «réduit»
+-d’afficher un logo
+-de gérer le timer de match
+-de gérer le timer des impros
+-d’écrire du texte
+-de pré-charger des thèmes
+-de passer en mode «réduit»
 -et tous ce que vous voudrez ajouter par vous-même…
