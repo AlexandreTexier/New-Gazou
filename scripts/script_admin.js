@@ -92,6 +92,10 @@ $(function() {
   // CAUCUS
   $('#btn_caucus').click(function() {
     //console.log('caucus starting');
+    // on enregistre le thème en cours s'il y en a un	
+    if($("#theme").val().length !== 0) {
+	theme[currentTheme] = $("#theme").val();
+    }
     $(this).addClass('active');
     $(this).siblings().removeClass('active');
     caucus = window.setInterval(Caucus, 1000);
