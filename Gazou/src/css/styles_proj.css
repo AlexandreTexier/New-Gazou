@@ -1,0 +1,350 @@
+/* FONT */
+
+@font-face {
+  font-family: 'Rubik Medium';
+  src: url('../fonts/Rubik-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Rubik Bold';
+  src: url('../fonts/Rubik-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Rubik Black';
+  src: url('../fonts/Rubik-Black.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url('../fonts/OpenSans-Bold.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* color: #39673A; */
+}
+
+html, body {
+  /* margin: 0;
+  padding: 0; */
+  font-family: 'Open Sans Bold';
+  color: rgb(55, 55, 55);
+  overflow: hidden;
+  /* background-color: #E1FEFF; */
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  text-transform: uppercase;
+  /* background-color: lightblue; */
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+/* ===== PROJECTION NORMALE ===== */
+
+#container_proj {
+  height: 100%;
+  width: 100%;
+  /* background-color: salmon; */
+}
+
+/* timer match*/
+
+#proj_duree_match_container {
+  margin: auto;
+  width: 15vw;
+  height: inherit;
+  position: relative;
+}
+#proj_duree_match_header{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  font-size: 1.2vw;
+  line-height: 2vw;
+  font-family: 'Rubik Medium';
+  text-transform: uppercase;
+  color: #ffff00;
+}
+#proj_duree_match {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  font-family: 'Rubik Bold';
+  font-size: 3vw;
+  line-height: 6.2vw;
+  color: white;
+}
+
+#proj_duree_match_fond {
+  position: absolute;
+  width: 100%;
+}
+
+/* timer impro*/
+
+#proj_duree_impro_container {
+  margin: auto;
+  width: 11vw;
+  height: inherit;
+  position: relative;
+  bottom: 12vw;
+}
+#proj_duree_impro_header{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  font-size: 1.2vw;
+  line-height: 2.2vw;
+  font-family: 'Rubik Medium';
+  text-transform: uppercase;
+  color: #ffff00;
+}
+#proj_duree_impro {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  font-family: 'Rubik Bold';
+  font-size: 3vw;
+  line-height: 6.7vw;
+  color: white;
+}
+
+#proj_duree_impro_fond {
+  position: absolute;
+  width: 100%;
+}
+
+/* theme impro*/
+
+#proj_theme_bloc {
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  top: 10vh;
+  padding: 0 10%;
+}
+
+#proj_theme {
+  width: 100%;
+  height: 100%;
+  font-family: 'Rubik Black';
+  font-size: 4vw;
+  /* border:1px solid black; */
+}
+
+td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 0 5%;
+}
+
+/* EQUIPE GAUCHE */
+
+/* equipe gauche blocs fond + penalité  */
+#bloc-equipe-gauche{
+  position: absolute;
+  width: 32vw;
+  bottom: -5px;
+  left: 0;
+}
+/* #proj_fond_bloc_g, #proj_bloc_g_p1, #proj_bloc_g_p2, #proj_bloc_g_p3 {
+  position: absolute;
+  width: 32vw;
+  bottom: -5px;
+  left: 0;
+} */
+
+/* equipe gauche nom */
+#proj_team_g {
+  position: absolute;
+  width: 24.6%;
+  bottom: 17.5vw;
+  padding-left: 3vw;
+  /* text-align: right; */
+  z-index: 5;
+}
+
+/* equipe gauche points */
+#proj_point_compteur_g {
+  position: absolute;
+  left: 0;
+  bottom: 4vw;
+  width: 25vw;
+  z-index: 5;
+  text-align: right;
+}
+
+/* EQUIPE DROITE */
+
+/* equipe droite */
+#bloc-equipe-droit{
+  position: absolute;
+  width: 32vw;
+  bottom: -5px;
+  right: 0;
+  transform: scale(-1, 1);
+}
+/* #proj_fond_bloc_d, #proj_bloc_d_p1, #proj_bloc_d_p2, #proj_bloc_d_p3 {
+  position: absolute;
+  width: 32vw;
+  bottom: -5px;
+  right: 0;
+  transform: scale(-1, 1);
+} */
+.penaliteactive{
+  fill:red;
+}
+/* equipe droite nom */
+
+#proj_team_d {
+  position: absolute;
+  width: 24.6%;
+  right:0;
+  bottom: 17.5vw;
+  padding-right: 3vw;
+  text-align: right;
+  z-index: 5;
+}
+
+/* equipe droite points */
+
+#proj_point_compteur_d {
+  position: absolute;
+  right: 0;
+  bottom: 4vw;
+  width: 25vw;
+  z-index: 5;
+  text-align: left;
+}
+
+/* team */
+
+.team {
+  font-family: 'Rubik Black';
+  font-size: 2.2vw;
+  line-height: 4vw;
+}
+
+/* points */
+
+.points {
+  font-family: 'Rubik Black';
+  color: white;
+  text-shadow: 0.5vh 0.5vh rgba(20,20,20,0.4);
+  font-size: 17vw;
+  line-height: 12vw;
+}
+
+/* penalites */
+
+.penalite-active {
+  fill: red;
+}
+
+/* ECRANS */
+.container-ecran{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  z-index:10;
+}
+#container-caucus,
+#container-entracte{
+  display: flex;
+  align-items: center;
+  background-color: #999999;
+}
+#container-vote,
+#container-merci{
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+}
+#container-caucus-txt{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:50%;
+  margin-top:-11vw;
+  font-size: 18vw;
+  text-align: center;
+  z-index:11;
+}
+.ecrans{
+  width: 100%;
+  /* height: 100%; */
+  margin: 0 auto;
+}
+.ecranhidden{
+  visibility: hidden;
+}
+
+/* VIDEOS */
+.video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* line-height: 50%; */
+  z-index: 10;
+  background-color: #000;
+}
+
+.videohide {
+  display: none;
+}
+
+/*MODE MINI*/
+
+#container_mini {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  visibility: hidden;
+  color: white;
+  background-color: black;
+}
+
+#proj_duree_match_mini {
+  margin: 0 auto;
+  margin-top: 1%;
+  font-size: 1.5vw;
+  text-align: center;
+  color: white;
+}
+
+#bloc_mini {
+  margin: 0 auto;
+  width: auto;
+  margin-top: 0.5%;
+  text-align: center;
+  font-size: 1.1vw;
+  color: white;
+}
+
+#proj_theme_mini {
+  margin-left: 0.5vw;
+  color: white;
+}
+
+#proj_duree_impro_mini {
+  color: white;
+}
