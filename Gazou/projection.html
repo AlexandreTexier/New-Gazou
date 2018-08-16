@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Version améliorée du logiciel Gazou dédié aux match de théâtre d'improvisation">
+  <meta name="author" content="Alexandre Texier">
+  <title>New Gazou — projection</title>
+  <!-- Par Alexandre Texier — 2018, licence Creative Common : BY-NC-SA -->
+
+  <script language="javascript" type="text/javascript" src="src/librairies/jquery-3.1.1.js"></script>
+  <script language="javascript" type="text/javascript" src="src/librairies/jquery-ui.js"></script>
+  <script language="javascript" type="text/javascript" src="src/scripts/script_proj.js"></script>
+  <link rel="stylesheet" type="text/css" href="src/css/styles_proj.css" />
+</head>
+
+<body>
+  <!-- CONTAINER NORMAL -->
+  <div id="container_proj">
+
+    <!-- TIMER DU MATCH -->
+    <div id="proj_duree_match_container">
+      <div id="proj_duree_match_header">Match</div>
+      <div id="proj_duree_match">00:00</div>
+      <div id="proj_duree_match_fond"></div>
+    </div>
+
+    <!-- THEME DE L'IMPRO -->
+    <table id="proj_theme_bloc">
+      <tr>
+        <td id="proj_theme">blank</td>
+      </tr>
+    </table>
+
+    <!-- TIMER DE L'IMPRO -->
+    <div id="proj_duree_impro_container">
+      <div id="proj_duree_impro_header">impro</div>
+      <div id="proj_duree_impro">00:00</div>
+      <div id="proj_duree_impro_fond"></div>
+    </div>
+
+    <!-- BLOC GAUCHE -->
+    <!-- bloc fond -->
+    <div id="bloc-equipe-gauche"></div>
+    <!-- nom equipe -->
+    <div id="proj_team_g" class="team">La Tila</div>
+    <!-- compteur points -->
+    <div id="proj_point_compteur_g" class="points">88</div>
+
+    <!-- BLOC DROIT -->
+    <!-- bloc fond -->
+    <div id="bloc-equipe-droit"></div>
+    <!-- nom equipe -->
+    <div id="proj_team_d" class="team">La Clique du clic</div>
+    <!-- compteur points -->
+    <div id="proj_point_compteur_d" class="points">88</div>
+
+  </div>
+
+  <!-- ÉCRANS -->
+  <div id="container-caucus" class="container-ecran ecranhidden"></div>
+  <div id="container-caucus-txt" class="container-ecran ecranhidden">88</div>
+  <div id="container-vote" class="container-ecran ecranhidden"></div>
+  <div id="container-entracte" class="container-ecran ecranhidden"></div>
+  <div id="container-merci" class="container-ecran ecranhidden"></div>
+
+  <!-- VIDEOS -->
+  <!-- video intro -->
+  <video id="video-intro" class="video videohide" src="src/videos/video-intro.mp4"></video>
+  <!-- video fin -->
+  <video id="video-fin" class="video videohide" src="src/videos/video-fin.mp4"></video>
+
+  <!-- CONTAINER MINI -->
+  <div id="container_mini">
+
+    <!-- duree match mini -->
+    <div id="proj_duree_match_mini"></div>
+    <!-- duree impro + theme mini -->
+    <div id="bloc_mini">
+      <span id="proj_duree_impro_mini">03:30</span>
+      <span id="proj_theme_mini">das theme</span>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Version améliorée du logiciel Gazou dédié aux match de théâtre d'improvisation">
+  <meta name="author" content="Alexandre Texier">
+  <title>New Gazou — Admin</title>
+  <!-- Par Alexandre Texier en 2018, licence Creative Common : BY-NC-SA -->
+
+  <script language="javascript" type="text/javascript" src="src/librairies/jquery-3.1.1.js"></script>
+  <script language="javascript" type="text/javascript" src="src/librairies/jquery-ui.js"></script>
+  <script language="javascript" type="text/javascript" src="src/scripts/script_admin.js"></script>
+  <link rel="stylesheet" type="text/css" href="src/css/styles_admin.css" />
+</head>
+
+<body>
+
+
+    <!-- mode couleur -->
+    <label id="switch-color-mode">
+      <input type="checkbox">
+      <span class="slider"></span>
+    </label>
+    <div id="switch-color-mode-txt" class="">clair</div>
+    <!-- skin selector -->
+    <div id="skin-selector-holder">
+      <div id="skin-previous" class="skin-btn">◀&thinsp;</div>
+      <div id="skin-next" class="skin-btn" style="margin-left: 2px;">&thinsp;▶</div>
+      <div id="skin-text">defaut</div>
+    </div>
+    <!-- notes -->
+    <textarea id="notes" class="" placeholder="notes"></textarea>
+
+    <!-- timer match -->
+    <div id="bloc-timer-match" class="movable">
+      <div class="grabber">…</div>
+      <button id="btn_match_time_stop" class="btn">■</button>
+      <div id="match_time" class="screen"><span id="match_time_minutes">45</span>:<span id="match_time_seconds">00</span></div>
+      <button id="btn_match_time_play" class="btn">&thinsp;▶</button>
+    </div>
+
+    <!-- bloc equipe gauche -->
+    <div id="bloc-equipe-g" class="movable">
+      <div class="grabber">…</div>
+      <input id="nom-equipe-g" class="screen" type="text" placeholder="Équipe gauche"></input>
+      <div id="bloc-points-g">
+          <div id="points-g" class="screen">88</div>
+          <button id="btn_points_g_moins" class="btn-screen">-</button>
+          <button id="btn_points_g_plus" class="btn-screen">+</button>
+      </div>
+      <ul id="penalites_holder_g">
+        <li id="penalites_g_1" class="penalites">×</li>
+        <li id="penalites_g_2" class="penalites">×</li>
+        <li id="penalites_g_3" class="penalites">×</li>
+      </ul>
+      <div id="team_color-g-view" class="team-color"></div>
+      <div class="showmore">▾</div>
+      <div id="team_color-g" class="team-color-selector hidable">
+        <div class="color" style="background-color:rgb(255,32, 0);"></div>
+        <div class="color" style="background-color:rgb(255, 96, 0);"></div>
+        <div class="color" style="background-color:rgb(255, 192, 0);"></div>
+        <div class="color" style="background-color:rgb(255, 224, 0);"></div>
+        <div class="color" style="background-color:rgb(160, 240, 0);"></div>
+        <div class="color" style="background-color:rgb(50, 200, 50);"></div>
+        <div class="color" style="background-color:rgb(0, 255, 192);"></div>
+        <div class="color" style="background-color:rgb(0, 165 , 224);"></div>
+        <div class="color" style="background-color:rgb(0, 96, 255);"></div>
+        <div class="color" style="background-color:rgb(128, 0, 255);"></div>
+        <div class="color" style="background-color:rgb(224, 0, 255);"></div>
+        <div class="color" style="background-color:rgb(255, 0, 192);"></div>
+        <div class="color" style="background-color:white;"></div>
+        <div class="color" style="background-color:grey"></div>
+        <div class="color" style="background-color:black;"></div>
+      </div>
+    </div>
+
+    <!-- bloc impro -->
+    <div id="bloc-impro" class="movable">
+      <div class="grabber">…</div>
+      <div style="display: table;width:100%;">
+        <textarea id="theme-impro" class="screen" style="display: table-cell;;margin:auto" contenteditable="true"></textarea>
+      </div>
+      <div id="timer-container">
+        <button id="btn_impro_time_stop" class="btn">■</button>
+        <div id="impro_time-container" class="screen">
+          <button id="btn_timer_impro_min_moins" class="btn-screen">-</button>
+          <button id="btn_timer_impro_sec_moins" class="btn-screen">-</button>
+          <div id="timer_impro"><span id="impro_time_minutes">05</span>:<span id="impro_time_seconds">00</span></div>
+          <button id="btn_timer_impro_min_plus" class="btn-screen">+</button>
+          <button id="btn_timer_impro_sec_plus" class="btn-screen">+</button>
+        </div>
+        <button id="btn_impro_time_play" class="btn">&thinsp;▶</button>
+      </div>
+    </div>
+
+    <!-- bloc equipe droit -->
+    <div id="bloc-equipe-d" class="movable">
+      <div class="grabber">…</div>
+      <input id="nom-equipe-d" class="screen" type="text" placeholder="Équipe droite"></input>
+      <div id="bloc-points-d">
+          <div id="points-d" class="screen">88</div>
+          <button id="btn_points_d_moins" class="btn-screen">-</button>
+          <button id="btn_points_d_plus" class="btn-screen">+</button>
+      </div>
+      <ul id="penalites_holder_d">
+        <li id="penalites_d_1" class="penalites">×</li>
+        <li id="penalites_d_2" class="penalites">×</li>
+        <li id="penalites_d_3" class="penalites">×</li>
+      </ul>
+      <div id="team_color-d-view" class="team-color"></div>
+      <div class="showmore">▾</div>
+      <div id="team_color-d" class="team-color-selector hidable">
+        <div class="color" style="background-color:rgb(255,32, 0);"></div>
+        <div class="color" style="background-color:rgb(255, 96, 0);"></div>
+        <div class="color" style="background-color:rgb(255, 192, 0);"></div>
+        <div class="color" style="background-color:rgb(255, 224, 0);"></div>
+        <div class="color" style="background-color:rgb(160, 240, 0);"></div>
+        <div class="color" style="background-color:rgb(50, 200, 50);"></div>
+        <div class="color" style="background-color:rgb(0, 255, 192);"></div>
+        <div class="color" style="background-color:rgb(0, 165 , 224);"></div>
+        <div class="color" style="background-color:rgb(0, 96, 255);"></div>
+        <div class="color" style="background-color:rgb(128, 0, 255);"></div>
+        <div class="color" style="background-color:rgb(224, 0, 255);"></div>
+        <div class="color" style="background-color:rgb(255, 0, 192);"></div>
+        <div class="color" style="background-color:white;"></div>
+        <div class="color" style="background-color:grey"></div>
+        <div class="color" style="background-color:black;"></div>
+      </div>
+    </div>
+
+    <!-- bloc boutons gestion -->
+    <div id="bloc-boutons-gestion" class="movable">
+      <div class="grabber">…</div>
+      <button id="btn_caucus" class="btn-long">caucus</button>
+      <button id="btn_reduit" class="btn-long">mode réduit</button>
+      <button id="btn_vote" class="btn-long">vote</button>
+      <button id="btn_video_intro" class="btn-long">video intro</button>
+      <button id="btn_entracte" class="btn-long">entracte</button>
+      <button id="btn_video_fin" class="btn-long">video fin</button>
+      <button id="btn_remerciements" class="btn-long">remerciements</button>
+    </div>
+
+    <!-- bloc boutons gestion -->
+    <div id="bloc-themes" class="movable">
+      <div class="grabber">…</div>
+      <div id="theme-selector-holder" class="screen">
+        <button id="theme-selector-previous" class="theme-selector-btn">◀</button>
+        <div id="theme-selector">pas de thèmes chargés</div>
+        <button id="theme-selector-next" class="theme-selector-btn">▶</button>
+      </div>
+      <button id="theme-launcher" class="btn">▶</button>
+      <div class="showmore">▾</div>
+      <ol id="theme_holder1" class="hidable">
+        <li class="theme_line">
+          <textarea class="theme-input screen" dataNumber="0" row="1" placeholder="thème 1"></textarea><div class="theme-input-status"></div>
+        </li>
+        <li class="theme_line">
+          <textarea class="theme-input screen" dataNumber="1" row="1" placeholder="thème 2"></textarea><div class="theme-input-status"></div>
+        </li>
+        <li class="theme_line">
+          <textarea class="theme-input screen" dataNumber="2" row="1" placeholder="thème 3"></textarea><div class="theme-input-status"></div>
+        </li>
+        <li class="theme_line">
+          <textarea class="theme-input screen" dataNumber="3" row="1" placeholder="thème 4"></textarea><div class="theme-input-status"></div>
+        </li>
+        <li class="theme_line">
+          <textarea class="theme-input screen" dataNumber="4" row="1" placeholder="thème 5"></textarea><div class="theme-input-status"></div>
+        </li>
+        <li class="theme_line">
+          <textarea class="theme-input screen" dataNumber="5" row="1" placeholder="thème 6"></textarea><div class="theme-input-status"></div>
+        </li>
+        <li class="theme_line">
+          <textarea class="theme-input screen" dataNumber="6" row="1" placeholder="thème 7"></textarea><div class="theme-input-status"></div>
+        </li>
+      </ol>
+      <ol id="theme_holder2" class="hidable">
+        <li class="theme_line">
+          <div class="theme-input-status"></div><textarea class="theme-input screen" dataNumber="7" row="1" placeholder="thème 8"></textarea>
+        </li>
+        <li class="theme_line">
+          <div class="theme-input-status"></div><textarea class="theme-input screen" dataNumber="8" row="1" placeholder="thème 9"></textarea>
+        </li>
+        <li class="theme_line">
+          <div class="theme-input-status"></div><textarea class="theme-input screen" dataNumber="9" row="1" placeholder="thème 10"></textarea>
+        </li>
+        <li class="theme_line">
+          <div class="theme-input-status"></div><textarea class="theme-input screen" dataNumber="10" row="1" placeholder="thème 11"></textarea>
+        </li>
+        <li class="theme_line">
+          <div class="theme-input-status"></div><textarea class="theme-input screen" dataNumber="11" row="1" placeholder="thème 12"></textarea>
+        </li>
+        <li class="theme_line">
+          <div class="theme-input-status"></div><textarea class="theme-input screen" dataNumber="12" row="1" placeholder="thème 13"></textarea>
+        </li>
+        <li class="theme_line">
+          <div class="theme-input-status"></div><textarea class="theme-input screen" dataNumber="13" row="1" placeholder="thème 14"></textarea>
+        </li>
+      </ol>
+    </div>
+
+</body>
+
+</html>
