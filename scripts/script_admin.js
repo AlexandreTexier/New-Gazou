@@ -13,6 +13,7 @@ var improTimeSec = 0;
 var timerImproPlaying = false;
 var timerMatchPlaying = false;
 var caucus;
+var bCaucus = false;
 var caucusTime = 20;
 
 var theme = [];
@@ -21,6 +22,7 @@ var currentTheme=0;
 //DOM READY
 $(function() {
 
+  $("#theme").val(' ');
 // si trois pénalités +1 points pour l'autre
 // btn huez l'arbitre
 
@@ -93,12 +95,18 @@ $(function() {
   $('#btn_caucus').click(function() {
     //console.log('caucus starting');
     // on enregistre le thème en cours s'il y en a un	
-    if($("#theme").val().length !== 0) {
-	theme[currentTheme] = $("#theme").val();
+    if(bCaucus == false)
+    {
+      if($("#theme").val().length !== 0) {
+        theme[currentTheme] = $("#theme").val();
+      }
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+      caucus = window.setInterval(Caucus, 1000);
+      bCaucus = true
+    }else{
+      resetCaucus();
     }
-    $(this).addClass('active');
-    $(this).siblings().removeClass('active');
-    caucus = window.setInterval(Caucus, 1000);
   });
   // VOTE
   $('#btn_vote').click(function() {
@@ -396,6 +404,13 @@ function Caucus() {
     $('#theme').css('color', 'orange');
   }
   if (caucusTime < 0) {
+    resetCaucus();
+  }
+  console.log(localStorage);
+}
+
+function resetCaucus() {
+  
     clearInterval(caucus);
     $("#theme").val(theme[currentTheme]);
     $('#btn_caucus').removeClass('active');
@@ -404,10 +419,10 @@ function Caucus() {
     localStorage.setItem("PourAfficher", theme[currentTheme]);
     $('#theme').css('color', 'white');
     caucusTime=20;
-  }
-  console.log(localStorage);
-}
 
+    bCaucus = false;
+ 
+}
 // COMPTEUR IMPRO
 function compteImpro() {
   improTimeSec--;
